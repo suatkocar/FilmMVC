@@ -1,6 +1,7 @@
 package dao;
 
 import java.io.BufferedReader;
+import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
@@ -8,6 +9,7 @@ import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Properties;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -24,11 +26,21 @@ public class TMDbApiDAO {
 	 * Constructor to initialise the API key for TMDb.
 	 */
 	
-	// MY API key for TMDb - This is normally stored in a secure location like a properties file or environment variable.
-	// But for the purpose of this project and for the Assignment it was stored here.
+	// Load the API key from the config.properties file
 	public TMDbApiDAO() {
-		this.apiKey = "47f68eb8da5868bbf454860765e08368"; 
-	}
+		 // Load properties file
+        try (InputStream input = getClass().getClassLoader().getResourceAsStream("config.properties")) {
+            Properties prop = new Properties();
+            if (input == null) {
+                System.out.println("Sorry, unable to find config.properties");
+                return;
+            }
+            prop.load(input);
+            this.apiKey = prop.getProperty("apiKey");
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+    }
 
 	/**
 	 * Method to make an API request to TMDb and return the response as a JSONObject.

@@ -1,5 +1,6 @@
 package dao;
 
+import java.io.InputStream;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -7,6 +8,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Properties;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -18,24 +20,11 @@ import model.Film;
  * Uses JDBC for database connection and operations.
  */
 
-public class FilmDAO {
-	/* The database credentials and connection URL for the Mudfoot database have been commented. 
-	 * Because Amazon RDS database will be used.
-	 * In real environments, methods such as Environment Variable or Config file are used for security.
-	 * For the purpose of the project and for the Assignment the credentials were written directly in the code.
-	*/
+public class FilmDAO {	
+	private String jdbcUrl;
+	private String jdbcUser;
+	private String jdbcPassword;
 	
-	/* Mudfoot database credentials and connection URL
-	 * private String user = "kocarsua"; private String password = "gesTopti8";
-	 * private String url = "jdbc:mysql://mudfoot.doc.stu.mmu.ac.uk:6306/" + user +
-	 * "?useSSL=false&serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8";
-	 */
-	
-	// Amazon RDS database credentials and connection URL
-	private String user = "admin";
-	private String password = "password";
-	private String url = "jdbc:mysql://filmdatabase.ch46emomeddv.eu-west-2.rds.amazonaws.com:3306/filmdatabase?useSSL=false&serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8";
-
 	private TMDbApiDAO tmdbApiDAO = new TMDbApiDAO(); // TMDb API DAO object for fetching movie data.
 
     /**
@@ -43,11 +32,26 @@ public class FilmDAO {
      */
 	public FilmDAO() {
 		try {
-			Class.forName("com.mysql.cj.jdbc.Driver");
-		} catch (ClassNotFoundException e) {
-			e.printStackTrace();
-		}
-	}
+            Class.forName("com.mysql.cj.jdbc.Driver");
+
+            // Load properties file
+            try (InputStream input = getClass().getClassLoader().getResourceAsStream("config.properties")) {
+                Properties prop = new Properties();
+                if (input == null) {
+                    System.out.println("Sorry, unable to find config.properties");
+                    return;
+                }
+                prop.load(input);
+                this.jdbcUrl = prop.getProperty("jdbcUrl");
+                this.jdbcUser = prop.getProperty("jdbcUser");
+                this.jdbcPassword = prop.getProperty("jdbcPassword");
+            } catch (Exception ex) {
+                ex.printStackTrace();
+            }
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
 	
     /**
      * Creates and returns a connection to the database.
@@ -55,7 +59,7 @@ public class FilmDAO {
      * @throws SQLException if a database access error occurs.
      */
 	private Connection getConnection() throws SQLException {
-		return DriverManager.getConnection(url, user, password);
+		return DriverManager.getConnection(jdbcUrl, jdbcUser, jdbcPassword);
 	}
 
 	/**
