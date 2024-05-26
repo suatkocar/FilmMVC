@@ -1,5 +1,8 @@
 # FilmMVC (HTTP/MVC Web Application)
 
+![Home Page](screenshots/home-page.jpg)
+![Film List Page](screenshots/film-list-page.jpg)
+
 ## Project Overview
 FilmMVC is a film management system developed using Java Servlets and JSP. It includes CRUD operations and external API integration.
 
