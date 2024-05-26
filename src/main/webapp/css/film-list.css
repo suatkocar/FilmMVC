@@ -1,0 +1,166 @@
+body, html {
+    font-family: "Cabin", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-style: normal;
+	font-variation-settings: "wdth" 100;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    min-height: 100%;
+    background-color: #FFF;
+    background-image: url(../images/film-list-bg.jpg);
+    background-repeat: no-repeat;
+ 	background-position: center;
+  	background-size: cover;
+  	background-attachment: fixed;
+}
+
+.filmListContainer {
+    padding: 20px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgba(255, 255, 255, 0.960);
+    background-repeat: no-repeat;
+ 	background-position: center;
+  	background-size: cover;
+  	border-radius: 50px;
+  	font-size: 1.1rem;
+  	margin-bottom: 50px;
+  	margin-top: 150px;
+}
+
+.table {
+    margin-top: 20px;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table img {
+    width: 150px;
+    height: auto;
+}
+
+.filmListContainer h1 {
+    text-align: center;
+}
+
+.form-inline {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    width: 100%;
+}
+
+.form-inline .btn, .form-inline .form-control {
+    margin: 5px;
+}
+
+.pagination {
+	border: 2px solid #ddd;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.search-pagination-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.review-text {
+    max-width: 750px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: justify;
+}
+
+
+.addButton, .editButton, .deleteButton, .btn {
+    padding: 8px 8px;
+    min-width: 100px;
+}
+
+.addButton, .editButton, .deleteButton {
+    display: block;
+}
+
+.editButton, .deleteButton {
+    margin-top: 5px;
+}
+
+.clear-search {
+    margin-left: 10px;
+}
+
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1050;
+}
+
+
+.expandedPoster {
+    position: fixed;
+    z-index: 1051;
+    cursor: zoom-out;
+    transition: transform 0.5s ease-in-out, left 0.5s ease-in-out, top 0.5s ease-in-out;
+    box-shadow: 0 0 20px #000;
+    filter: brightness(1) drop-shadow(0 0 12px #000) drop-shadow(0 0 20px #000);
+}
+
+.filmPoster {
+ 	cursor: pointer;
+ }
+ 
+ .filmPoster:hover {
+ 	transform: scale(1.2);
+ 	filter: brightness(1) drop-shadow(0 0 12px #000) drop-shadow(0 0 20px #000);
+ }
+ 
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    filter: brightness(1.2) drop-shadow(0 0 6px #F00) drop-shadow(0 0 10px #F00);
+    border: 8px solid rgba(255, 255, 255, 0.3);
+    border-top: 8px solid #ffffff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+ 
