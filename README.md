@@ -9,17 +9,24 @@
 ![Film List Page](screenshots/film-list-page.jpg)
 
 ## Project Overview
-FilmMVC is a film management system developed using Java Servlets and JSP. It includes CRUD operations and external API integration.
+FilmMVC is a film management system developed using Java Servlets and JSP. The application allows users to perform CRUD operations on a film database and integrates with external APIs for additional film information.
 
 ## Features
-- Add, edit, delete, and list films
-- Search films by various criteria
-- Integrate with external APIs for additional film information
+- **CRUD Operations:** Users can add, edit, delete, and list films.
+- **Search Functionality:** The application provides search capabilities for films by various criteria.
+- **External API Integration:** It integrates with external APIs to fetch additional film information.
 
 ## Technologies Used
 - **Backend:** Java, Servlets, JSP
 - **Database:** MySQL
 - **Build Tool:** Apache Maven
+
+## Design and Architecture
+
+The FilmMVC project follows a Model-View-Controller (MVC) design pattern.
+1. **Model:** Represents the film data and business logic.
+2. **View:** Displays the data (film information) to the user.
+3. **Controller:** Handles user input and interacts with the model to update the view.
 
 ## Getting Started
 
