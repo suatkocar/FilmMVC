@@ -21,6 +21,7 @@ FilmMVC is a film management system developed using Java Servlets and JSP. It in
 - MySQL Server
 
 ### Installation
+
 1. Clone the repository:
 
    ```bash
@@ -40,52 +41,53 @@ FilmMVC is a film management system developed using Java Servlets and JSP. It in
 
 - Copy the example config file:
 
- ```bash
- cp src/main/resources/config.properties.example src/main/resources/config.properties
+   ```bash
+   cp src/main/resources/config.properties.example src/main/resources/config.properties
 
- - Edit the config.properties file and set your database and API credentials:
+- Edit the config.properties file and set your database and API credentials:
 
-```properties
-jdbcUrl=jdbc:mysql://localhost:3306/filmdb
-jdbcUser=your-username
-jdbcPassword=your-password
-apiKey=your-api-key
-```
+   ```bash
+   jdbcUrl=jdbc:mysql://localhost:3306/filmdb
+   jdbcUser=your-username
+   jdbcPassword=your-password
+   apiKey=your-api-key
 
 5. Build the project:
 
    ```bash
    mvn clean install
+   
 
 6. Deploy the FilmMVC.war file to your servlet container (e.g., Apache Tomcat).
 
 Usage
+
 Access the application at http://localhost:8080/FilmMVC.
 
 Project Structure
 
-```plaintext
-FilmMVC
-├── build
-├── deploy
-├── src
-│   ├── main
-│   │   ├── java
-│   │   │   ├── controller
-│   │   │   ├── dao
-│   │   │   ├── listener
-│   │   │   └── model
-│   │   ├── resources
-│   │   └── webapp
-│   │       ├── META-INF
-│   │       ├── WEB-INF
-│   │       ├── audio
-│   │       ├── css
-│   │       ├── images
-│   │       ├── js
-│   │       └── json
-└── README.md
-```
+   ```plaintext
+   FilmMVC
+   ├── build
+   ├── deploy
+   ├── src
+   │   ├── main
+   │   │   ├── java
+   │   │   │   ├── controller
+   │   │   │   ├── dao
+   │   │   │   ├── listener
+   │   │   │   └── model
+   │   │   ├── resources
+   │   │   └── webapp
+   │   │       ├── META-INF
+   │   │       ├── WEB-INF
+   │   │       ├── audio
+   │   │       ├── css
+   │   │       ├── images
+   │   │       ├── js
+   │   │       └── json
+   └── README.md
+   ```
 
 ## License
 
