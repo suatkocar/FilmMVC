@@ -69,7 +69,7 @@ The FilmMVC project follows a Model-View-Controller (MVC) design pattern.
    jdbcUrl=jdbc:mysql://localhost:3306/filmdb
    jdbcUser=your-username
    jdbcPassword=your-password
-   apiKey=your-api-key
+   TmdbApiKey=your-api-key
    ```
 
 5. Build the project:
