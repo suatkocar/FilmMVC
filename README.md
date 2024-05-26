@@ -29,25 +29,24 @@ FilmMVC is a film management system developed using Java Servlets and JSP. It in
 2. Navigate to the project directory:
    ```bash
    cd FilmMVC
+
 3. Set up the database:
    
 - Create a MySQL database named filmdb.
 - Execute the SQL script located at src/main/resources/createfilms.sql to create the necessary tables.
 
-4. Configure the database connection in WEB-INF/web.xml:
-```xml
-<context-param>
-   <param-name>jdbcUrl</param-name>
-   <param-value>jdbc:mysql://localhost:3306/filmdb</param-value>
-</context-param>
-<context-param>
-   <param-name>jdbcUser</param-name>
-   <param-value>your-username</param-value>
-</context-param>
-<context-param>
-   <param-name>jdbcPassword</param-name>
-   <param-value>your-password</param-value>
-</context-param>
+4. Create and configure the config.properties file:
+
+- Copy the example config file:
+ ```bash
+ cp src/main/resources/config.properties.example src/main/resources/config.properties
+
+- Edit the config.properties file and set your database and API credentials:
+```properties
+jdbcUrl=jdbc:mysql://localhost:3306/filmdb
+jdbcUser=your-username
+jdbcPassword=your-password
+apiKey=your-api-key
 ```
 
 5. Build the project:
@@ -85,7 +84,9 @@ FilmMVC
 ```
 
 License
+
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
 
 Contact
+
 For any inquiries, please contact Suat Kocar at suatkocar.dev@gmail.com.
