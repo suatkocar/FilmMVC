@@ -1,3 +1,4 @@
 .DS_Store
 # Ignore config.properties
+src/main/resources/config.properties.DS_Store
 src/main/resources/config.properties
