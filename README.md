@@ -44,13 +44,14 @@ FilmMVC is a film management system developed using Java Servlets and JSP. It in
  ```bash
  cp src/main/resources/config.properties.example src/main/resources/config.properties```
 
-- Edit the config.properties file and set your database and API credentials:
+ - Edit the config.properties file and set your database and API credentials:
 
 ```properties
 jdbcUrl=jdbc:mysql://localhost:3306/filmdb
 jdbcUser=your-username
 jdbcPassword=your-password
-apiKey=your-api-key```
+apiKey=your-api-key
+```
 
 5. Build the project:
 
@@ -84,7 +85,8 @@ FilmMVC
 │   │       ├── images
 │   │       ├── js
 │   │       └── json
-└── README.md```
+└── README.md
+```
 
 ## License
 
