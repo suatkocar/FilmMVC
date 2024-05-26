@@ -1,7 +1,0 @@
-# Database Configuration
-jdbcUrl=jdbc:mysql://localhost:3306/filmdb
-jdbcUser=your-username
-jdbcPassword=your-password
-
-# TMDb API Key
-apiKey=your-api-key
