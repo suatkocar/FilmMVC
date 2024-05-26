@@ -23,10 +23,12 @@ FilmMVC is a film management system developed using Java Servlets and JSP. It in
 
 ### Installation
 1. Clone the repository:
+
    ```bash
    git clone https://github.com/suatkocar/FilmMVC.git
 
 2. Navigate to the project directory:
+
    ```bash
    cd FilmMVC
 
@@ -38,10 +40,13 @@ FilmMVC is a film management system developed using Java Servlets and JSP. It in
 4. Create and configure the config.properties file:
 
 - Copy the example config file:
+
  ```bash
  cp src/main/resources/config.properties.example src/main/resources/config.properties
+  ```
 
 - Edit the config.properties file and set your database and API credentials:
+
 ```properties
 jdbcUrl=jdbc:mysql://localhost:3306/filmdb
 jdbcUser=your-username
@@ -50,6 +55,7 @@ apiKey=your-api-key
 ```
 
 5. Build the project:
+
    ```bash
    mvn clean install
 
