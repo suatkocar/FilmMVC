@@ -25,19 +25,17 @@ FilmMVC is a film management system developed using Java Servlets and JSP. It in
 1. Clone the repository:
    ```bash
    git clone https://github.com/suatkocar/FilmMVC.git
-Navigate to the project directory:
 
-bash
-Kodu kopyala
-cd FilmMVC
-Set up the database:
+2. Navigate to the project directory:
+   ```bash
+   cd FilmMVC
+3. Set up the database:
+   
+- Create a MySQL database named filmdb.
+- Execute the SQL script located at src/main/resources/createfilms.sql to create the necessary tables.
 
-Create a MySQL database named filmdb.
-Execute the SQL script located at src/main/resources/createfilms.sql to create the necessary tables.
-Configure the database connection in WEB-INF/web.xml:
-
-xml
-Kodu kopyala
+4. Configure the database connection in WEB-INF/web.xml:
+```xml
 <context-param>
    <param-name>jdbcUrl</param-name>
    <param-value>jdbc:mysql://localhost:3306/filmdb</param-value>
@@ -50,19 +48,20 @@ Kodu kopyala
    <param-name>jdbcPassword</param-name>
    <param-value>your-password</param-value>
 </context-param>
-Build the project:
+```
 
-bash
-Kodu kopyala
+5. Build the project:
+   ```bash
 mvn clean install
-Deploy the FilmMVC.war file to your servlet container (e.g., Apache Tomcat).
+
+6. Deploy the FilmMVC.war file to your servlet container (e.g., Apache Tomcat).
 
 Usage
 Access the application at http://localhost:8080/FilmMVC.
 
 Project Structure
-plaintext
-Kodu kopyala
+
+```plaintext
 FilmMVC
 ├── build
 ├── deploy
@@ -83,6 +82,8 @@ FilmMVC
 │   │       ├── js
 │   │       └── json
 └── README.md
+```
+
 License
 This project is licensed under the MIT License - see the LICENSE.md file for details.
 
