@@ -20,6 +20,7 @@ FilmMVC is a film management system developed using Java Servlets and JSP. The a
 - **Backend:** Java, Servlets, JSP
 - **Database:** MySQL
 - **Build Tool:** Apache Maven
+- **IDE:** Eclipse
 
 ## Design and Architecture
 
