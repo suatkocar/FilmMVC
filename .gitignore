@@ -1,3 +1,14 @@
+# macOS
 .DS_Store
-src/main/resources/config.properties
 
+# Eclipse-specific files
+/.classpath
+/.project
+/.settings/
+
+# Maven
+/target/
+/build/
+
+# Config files
+src/main/resources/config.properties
