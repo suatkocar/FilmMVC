@@ -52,7 +52,8 @@ FilmMVC is a film management system developed using Java Servlets and JSP. It in
 
 5. Build the project:
    ```bash
-mvn clean install
+   mvn clean install
+
 
 6. Deploy the FilmMVC.war file to your servlet container (e.g., Apache Tomcat).
 
