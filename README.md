@@ -11,7 +11,6 @@ FilmMVC is a film management system developed using Java Servlets and JSP. It in
 ## Technologies Used
 - **Backend:** Java, Servlets, JSP
 - **Database:** MySQL
-- **Libraries:** Gson, Jakarta XML Bind
 - **Build Tool:** Apache Maven
 
 ## Getting Started
@@ -25,12 +24,12 @@ FilmMVC is a film management system developed using Java Servlets and JSP. It in
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/suatkocar/FilmMVC.git```
+   git clone https://github.com/suatkocar/FilmMVC.git
 
 2. Navigate to the project directory:
 
    ```bash
-   cd FilmMVC```
+   cd FilmMVC
 
 3. Set up the database:
    
@@ -42,7 +41,7 @@ FilmMVC is a film management system developed using Java Servlets and JSP. It in
 - Copy the example config file:
 
  ```bash
- cp src/main/resources/config.properties.example src/main/resources/config.properties```
+ cp src/main/resources/config.properties.example src/main/resources/config.properties
 
  - Edit the config.properties file and set your database and API credentials:
 
@@ -56,7 +55,7 @@ apiKey=your-api-key
 5. Build the project:
 
    ```bash
-   mvn clean install```
+   mvn clean install
 
 6. Deploy the FilmMVC.war file to your servlet container (e.g., Apache Tomcat).
 
