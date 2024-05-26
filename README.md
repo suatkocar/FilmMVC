@@ -43,7 +43,6 @@ FilmMVC is a film management system developed using Java Servlets and JSP. It in
 
  ```bash
  cp src/main/resources/config.properties.example src/main/resources/config.properties
-  ```
 
 - Edit the config.properties file and set your database and API credentials:
 
@@ -52,12 +51,11 @@ jdbcUrl=jdbc:mysql://localhost:3306/filmdb
 jdbcUser=your-username
 jdbcPassword=your-password
 apiKey=your-api-key
-```
 
 5. Build the project:
 
    ```bash
-   mvn clean install
+   mvn clean install ```
 
 6. Deploy the FilmMVC.war file to your servlet container (e.g., Apache Tomcat).
 
@@ -89,10 +87,10 @@ FilmMVC
 └── README.md
 ```
 
-License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
 
-Contact
+## Contact
 
 For any inquiries, please contact Suat Kocar at suatkocar.dev@gmail.com.
