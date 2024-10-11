@@ -1,4 +1,4 @@
-# [FilmMVC (HTTP/MVC Web Application))](https://suatkocar.dev/FilmMVC/)
+# [FilmMVC (HTTP/MVC Web Application)](https://suatkocar.dev/FilmMVC/)
 
 ## Home Page
 
